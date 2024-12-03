@@ -9,16 +9,16 @@ from game.service.game_service_impl import GameServiceImpl
 class GameController(viewsets.ViewSet):
     gameService = GameServiceImpl.getInstance()
 
-    #def requestRollDice(self, request):
-    #    dice = self.diceService.rollDice()
+    def requestGame(self, request):  # 막 넣었어요...
+        #game = self.GameService.rollDice()
 
-    #    return Response(dice, status=status.HTTP_200_OK)
+        return Response(status=status.HTTP_200_OK)
 
 
-    #def requestFindDice(self, request):
+    def requestResult(self, request): # 이것도요...
     #    requestGetData = request.GET
     #    requestDiceNumber = requestGetData.get('number')
 
     #    foundDice = self.diceService.findDice(requestDiceNumber)
 
-    #    return Response(model_to_dict(foundDice),status=status.HTTP_200_OK)
+        return Response(status=status.HTTP_200_OK)

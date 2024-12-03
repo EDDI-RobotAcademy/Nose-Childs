@@ -14,8 +14,8 @@ urlpatterns = [
          # 결론적으로 /dice/request-roll-dice 로 시작
          AccountController.as_view({ 'get': 'requestCreateName' }),
          name='player 이름 생성'),
-    path('request-Fine-Account',
-         AccountController.as_view({ 'get': 'requestFineAccount' }),
+    path('request-Find-Account',
+         AccountController.as_view({ 'get': 'requestFindAccount' }),
          name='player account 찾기'),
     #path('request-every-dice',
     #     DiceController.as_view({ 'get': 'requestEveryDice' }),

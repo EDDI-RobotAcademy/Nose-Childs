@@ -20,16 +20,10 @@ class GameRepositoryImpl(GameRepository):
 
         return cls.__instance
 
-    def diceGame(self,diceList):
-        return
-
-    def checkWinner(self):
-        # 필요한거: sum값 playerA= [1,5]  playerB= [2,2]
-        # diceList= [[1,5],[2,2]]
-        # sum A  =6
-        # sum B = 4
-        # if sumA > sum B
-        #return
-        pass
-
+    def playerAWinPrint(self):
+        return print("First player Wins")
+    def playerBWinPrint(self):
+        return print("Second player Win")
+    def drawPrint(self):
+        return print("A tie game")
 

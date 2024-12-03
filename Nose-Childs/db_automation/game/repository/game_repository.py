@@ -4,9 +4,13 @@ from abc import ABC, abstractmethod
 class GameRepository(ABC):
 
     @abstractmethod
-    def diceGame(self, diceList):  # sum
+    def playerAWinPrint(self):  # sum
         pass
 
     @abstractmethod
-    def checkWinner(self):
+    def playerBWinPrint(self):
+        pass
+
+    @abstractmethod
+    def drawPrint(self):
         pass

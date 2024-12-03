@@ -33,13 +33,24 @@ class GameServiceImpl(GameService):
         return cls.__instance
 
     def diceResultSum(self, diceList):
-        # 뭐 받아야함? DiceRepositoryImpl(DiceRepository)
+
         self.__diceRepository.rollDice()  # diceList = [[2,3], [1,6]]
         for seq in diceList:  # seq = [2,5]
             sum = seq[0] + seq[1]
-            self.sumList.append(sum)   # sumList[0] # 첫번째 플레이어 sum 값
+            self.sumList.append(sum)   # sumList[0] : 첫번째 플레이어 sum 값, sumList[1] : 두번째 플레이어
 
         return self.sumList   # sumList = [5, 7]
 
     def checkWinner(self):
-        return
+        #A = self.sumList[0]
+        #B = self.sumList[1]
+
+        if self.sumList[0] > self.sumList[1]:
+            return self.__gameRepository.playerAWinPrint()
+
+        elif self.sumList[0] < self.sumList[1]:
+            return self.__gameRepository.playerBWinPrint()
+
+        else:
+             return self.__gameRepository.drawPrint()
+
