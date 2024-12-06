@@ -1,10 +1,10 @@
 from abc import ABC, abstractmethod
 
 
-class DiceRepository(ABC):
+class FruitMartRepository(ABC):
 
     @abstractmethod
-    def create(self, game, player):
+    def create(self, order, customer):
         pass
 
     @abstractmethod
@@ -12,11 +12,11 @@ class DiceRepository(ABC):
         pass
 
     @abstractmethod
-    def findByGameId(self, gameId):
+    def findByOrderId(self, orderId):
         pass
 
     @abstractmethod
-    def findByGameAndPlayer(self, game, player):
+    def findByOrderAndCustomer(self, order, customer):
         pass
 
     @abstractmethod

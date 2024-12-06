@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     "corsheaders",
     "rest_framework",
     'customer',
-    'fruit_market',
+    'fruit_mart',
     'order'
 ]
 
