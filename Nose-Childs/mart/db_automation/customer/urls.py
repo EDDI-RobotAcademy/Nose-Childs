@@ -5,7 +5,7 @@ from customer.controller.customer_controller import CustomerController
 
 router = DefaultRouter()
 router.register(r"customer", CustomerController, basename='customer')
-# customer OR order OR fruit_mart 통일해주기. 여긴 customer.
+# customer OR order OR fruitMart 통일해주기. 여긴 customer.
 
 # 이쪽부분 작성할땐 Controller 참고하기
 urlpatterns = [
